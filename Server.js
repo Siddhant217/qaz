@@ -26,6 +26,6 @@ try {
 } 
 app.use(UploadRoute);
 
-app.listen(PORT, () => {
-  console.log(`Server started at port: ${PORT}`);
+app.listen(5001, () => {
+  console.log(`Server started at port: ${5001}`);
 });
