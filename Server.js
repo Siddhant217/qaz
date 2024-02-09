@@ -6,7 +6,14 @@ require("dotenv").config();
 const UploadRoute = require("./routes/UploadRoute");
 
 const app = express();
-app.use(cors());
+// middleware
+const corsOptions = {
+    origin: "https://sage-macaron-39111c.netlify.app/", // frontend URI (ReactJS)
+}
+app.use(express.json());
+app.use(cors(corsOptions));
+// app.use(cors());
+
 app.use(express.json());
 app.use(express.static("public"));
 
